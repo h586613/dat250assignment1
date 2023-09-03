@@ -42,6 +42,12 @@ public class App {
 
 
     public static void main(String[] args) {
+        createWebPage();
+    }
+
+
+
+    public static void createWebPage(){
         Javalin.create()
                 .get("/", ctx -> {
                     ctx.html(WEBPAGE);
@@ -78,6 +84,5 @@ public class App {
                 })
                 .start(9000);
     }
-
 
 }
